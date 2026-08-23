@@ -8,7 +8,6 @@ O cálculo segue o traçado operacional em p.u. (base \(S_n\)) com dependência 
 |---|---|
 | Versão | 1.0.0 |
 | Linguagem | Python 3.10+ |
-| Licença | [MIT](LICENSE) |
 | Entrada | JSON + CSV opcionais por unidade geradora |
 | Saída | GUI, console, CSV para gráfico XY no Elipse E3 |
 
