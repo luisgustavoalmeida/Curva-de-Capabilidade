@@ -3,12 +3,12 @@ Conversões em por unidade (p.u.).
 
 Bases alinhadas à prática de curvas de capabilidade (ONS / IEEE / Kundur):
 
-    Sn  — potência aparente nominal (MVA) → base de P, Q, S
-    Vn  — tensão terminal nominal (kV)    → base de Vt
-    In  — corrente de estator nominal (A) → base de Is
-    If_FL — corrente de campo a plena carga (A) → base de If
-    fn  — frequência nominal (Hz)         → base de f
-    Hn  — queda nominal (m), hidráulica   → base de H
+    Sn  - potência aparente nominal (MVA) → base de P, Q, S
+    Vn  - tensão terminal nominal (kV)    → base de Vt
+    In  - corrente de estator nominal (A) → base de Is
+    If_FL - corrente de campo a plena carga (A) → base de If
+    fn  - frequência nominal (Hz)         → base de f
+    Hn  - queda nominal (m), hidráulica   → base de H
 
 Equações:
     P_pu  = P_MW / Sn
@@ -20,7 +20,7 @@ Equações:
     H_pu  = H_m / Hn
 
 Referências:
-    - ONS BD Anatem v1.6 — traçado operacional de curva de capabilidade.
+    - ONS BD Anatem v1.6 - traçado operacional de curva de capabilidade.
     - IEEE Std 1110-2002: Guide for Synchronous Generator Modeling.
     - KUNDUR, P. Power System Stability and Control. Cap. 3.
     - FITZGERALD / KINGSLEY: corrente trifásica I = S/(√3 V).

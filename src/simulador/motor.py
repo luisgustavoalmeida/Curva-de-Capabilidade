@@ -165,7 +165,7 @@ class SimuladorCapabilidade:
             ponto.corrente_estator = CorrenteEstator(s, ponto.tensao) if s > 0 else 0.0
 
     def obter_ponto_operacional_pu(self) -> tuple:
-        """Retorna (P_pu, Q_pu, V_pu) — compatibilidade."""
+        """Retorna (P_pu, Q_pu, V_pu) - compatibilidade."""
         grandezas = self.obter_grandezas_campo_pu()
         return (grandezas["P"], grandezas["Q"], grandezas["Vt"])
 

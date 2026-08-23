@@ -7,7 +7,7 @@ Convenção adotada (ONS BD Anatem / usinas brasileiras):
     Base: Sn (MVA)
 
 Referências:
-    - ONS BD Anatem v1.6 — traçado operacional de curva de capabilidade.
+    - ONS BD Anatem v1.6 - traçado operacional de curva de capabilidade.
     - KUNDUR, P. Power System Stability and Control.
 """
 

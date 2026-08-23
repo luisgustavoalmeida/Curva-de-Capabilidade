@@ -1,5 +1,5 @@
 ' =============================================================================
-' 03_TimerCicloCompleto.vbs — Ciclo Elipse × Python (todas as UGs)
+' 03_TimerCicloCompleto.vbs - Ciclo Elipse × Python (todas as UGs)
 ' =============================================================================
 '
 ' FLUXO A CADA TICK DO TIMER (recomendado: 1000 ms)

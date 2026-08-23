@@ -16,7 +16,7 @@ Composição alinhada ao traçado operacional (ONS BD Anatem / IEEE Std 1110):
         Efd(If) via OCC / If_NL (IEEE 1110)
 
 Referências:
-    - ONS BD Anatem v1.6 — Pmec Max, UEL ATIVO, Tensão.
+    - ONS BD Anatem v1.6 - Pmec Max, UEL ATIVO, Tensão.
     - KUNDUR, P. Power System Stability and Control. Seção 3.4.
     - IEEE Std 1110-2002.
 """
@@ -194,8 +194,8 @@ class AvaliadorCurvas:
             LimitePmecMax / LimitePmecMin
 
         Referência (informativos; não cortam o envelope):
-            LimiteQuedaUtil — P disponível pela H atual (pode ficar fora da região)
-            LimiteTurbinaMax / LimiteTurbinaMin — tetos/pisos da turbina
+            LimiteQuedaUtil - P disponível pela H atual (pode ficar fora da região)
+            LimiteTurbinaMax / LimiteTurbinaMin - tetos/pisos da turbina
         """
         sn = (
             self.configuracao.base_potencia_aparente
@@ -236,7 +236,7 @@ class AvaliadorCurvas:
         return limites
 
     def obter_potencia_ativa_minima(self) -> float:
-        """P mínima da região permitida — só Pmec mínima configurada."""
+        """P mínima da região permitida - só Pmec mínima configurada."""
         return self.configuracao.potencia_mecanica_minima_pu
 
     def calcular_envelope(
@@ -434,7 +434,7 @@ class AvaliadorCurvas:
             self.gerador,
             em_por_unidade=True,
         )
-        # MEL: escala V² (não circular — evita muro em Q=0)
+        # MEL: escala V² (não circular - evita muro em Q=0)
         if self.configuracao.curva_mel or self.configuracao.curva_sub_excitacao:
             q_mel = EscalarLimiteQPorTensaoQuadratica(q_mel, vt, vt_ref)
 

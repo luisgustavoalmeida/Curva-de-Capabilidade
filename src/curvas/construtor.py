@@ -19,7 +19,7 @@ from src.utilitarios.grafico import ConverterParaGrafico
 P_REFERENCIA_MIN = -0.25
 P_REFERENCIA_MAX = 1.25
 
-# Chaves geométricas / Pmec — não são séries Q(P) do envelope
+# Chaves geométricas / Pmec - não são séries Q(P) do envelope
 CHAVES_GEOMETRICAS = frozenset(
     {
         "CirculoPotenciaAparente",
@@ -274,7 +274,7 @@ class ConstrutorCurvaCapabilidade:
         self._adicionar_circulo_operacao_is(
             resultado, tensao_terminal, corrente_estator_operacao_pu
         )
-        # Eixo P = 0 (operação típica do compensador) — formato (P, Q)
+        # Eixo P = 0 (operação típica do compensador) - formato (P, Q)
         resultado.curvas_individuais_superiores["EixoOperacaoCompensador"] = [
             (0.0, -raio_aparente * 1.15),
             (0.0, raio_aparente * 1.15),
@@ -409,7 +409,7 @@ class ConstrutorCurvaCapabilidade:
             Q = S · sqrt(1 - fp²)
             Q = P · tan(arccos(fp))
 
-        Referência: Kundur Cap. 3; IEEE Std 1110 — rated power factor line.
+        Referência: Kundur Cap. 3; IEEE Std 1110 - rated power factor line.
         Formato interno: (P, Q).
         """
         fp = self.avaliador.gerador.fator_potencia_nominal

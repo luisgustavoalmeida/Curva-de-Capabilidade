@@ -1,5 +1,5 @@
 ' =============================================================================
-' 04_Utilitarios.vbs — Funções auxiliares (arquivo, número, tags)
+' 04_Utilitarios.vbs - Funções auxiliares (arquivo, número, tags)
 ' =============================================================================
 ' Dependências: constantes de 00_Config.vbs (CAMINHO_RAIZ_DADOS, etc.)
 '

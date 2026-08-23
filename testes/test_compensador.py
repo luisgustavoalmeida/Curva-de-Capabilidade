@@ -23,7 +23,7 @@ def _pasta_compensador(tmp_path: Path) -> str:
 
     gerador = json.loads((destino / "gerador.json").read_text(encoding="utf-8"))
     gerador["TipoMaquina"] = "CompensadorSincrono"
-    gerador["Identificacao"] = "Compensador — teste"
+    gerador["Identificacao"] = "Compensador - teste"
     gerador["PotenciaAtivaNominal"] = 0.0
     gerador["FatorPotenciaNominal"] = 0.0
     gerador["PotenciaAtivaMaximaPu"] = 0.0

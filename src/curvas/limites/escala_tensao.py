@@ -3,20 +3,20 @@ Escalonamento de limites tabulados com tensão terminal.
 
 Dois modelos:
 
-1) Circular (SCL / potência aparente — círculo em torno da origem):
+1) Circular (SCL / potência aparente - círculo em torno da origem):
        S_ref² = P² + Q_ref²
        S(Vt)  = S_ref · (Vt / Vt_ref)
        Q(Vt)  = sinal(Q_ref) · √(max(0, S(Vt)² − P²))
    Se S(Vt) < |P|, o arco não existe → limite não vincula (+inf / −inf).
 
-2) Quadrático (UEL / estabilidade — margem ∝ V²/X, Kundur Cap. 5):
+2) Quadrático (UEL / estabilidade - margem ∝ V²/X, Kundur Cap. 5):
        Q(Vt) = Q_ref · (Vt / Vt_ref)²
 
 NÃO usar escala circular em limites de campo (OEL): o centro do arco de
 campo é −Vt²/Xd, não a origem. Nesses casos usar a fórmula analítica.
 
 Referências:
-    - ONS BD Anatem — curvas em tensão de referência.
+    - ONS BD Anatem - curvas em tensão de referência.
     - IEEE Std 1110-2002 / Kundur Seção 3.4.
 """
 
@@ -33,7 +33,7 @@ def EscalarLimiteQPorTensao(
     Escala Q de limite circular (SCL) de Vt_ref para Vt atual.
 
     Se o ponto (P, Vt) fica fora do arco escalado, retorna +inf (limite
-    superior) ou −inf (limite inferior) para NÃO vincular o envelope —
+    superior) ou −inf (limite inferior) para NÃO vincular o envelope -
     nunca retorna 0 (que criaria muro artificial em Q=0).
     """
     if tensao_referencia <= 0:
@@ -56,7 +56,7 @@ def EscalarLimiteQPorTensaoQuadratica(
     tensao_referencia: float = 1.0,
 ) -> float:
     """
-    Escala Q proporcional a (Vt/Vt_ref)² — UEL / limites de estabilidade.
+    Escala Q proporcional a (Vt/Vt_ref)² - UEL / limites de estabilidade.
     """
     if tensao_referencia <= 0:
         return potencia_reativa_ref

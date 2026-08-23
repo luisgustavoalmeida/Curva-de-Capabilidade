@@ -115,7 +115,7 @@ def main() -> None:
 
     parser = argparse.ArgumentParser(
         description=(
-            "Curva de Capabilidade — gerador ou compensador. "
+            "Curva de Capabilidade - gerador ou compensador. "
             "Template: dados/usina | Serviço: envelope dinâmico multi-UG."
         )
     )

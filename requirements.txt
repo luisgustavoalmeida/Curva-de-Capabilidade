@@ -1,4 +1,4 @@
-# Dependências — curva de capabilidade (leve)
+# Dependências - curva de capabilidade (leve)
 # Cálculo: biblioteca padrão Python.
 # Interface / testes:
 pytest>=8.0.0

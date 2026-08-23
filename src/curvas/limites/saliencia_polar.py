@@ -5,7 +5,7 @@ Objetivo:
     Aplicar limite inferior de potência reativa pela curva de saliência polar.
 
 Referências:
-    - ONS BD Anatem — traçado operacional / saliência polar.
+    - ONS BD Anatem - traçado operacional / saliência polar.
     - KUNDUR, P. Power System Stability and Control.
 """
 

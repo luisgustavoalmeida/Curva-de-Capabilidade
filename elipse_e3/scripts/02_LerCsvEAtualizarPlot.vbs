@@ -13,13 +13,13 @@
 '
 ' ESTRATÉGIA DE PLOT NO ELIPSE E3 (duas opções)
 '
-'   A) RECOMENDADA — Gráfico XY ligado ao arquivo CSV
+'   A) RECOMENDADA - Gráfico XY ligado ao arquivo CSV
 '      No Studio: ChartXY → Pen → Data Source = arquivo
 '      (ou “User File” / importação periódica, conforme versão do E3)
 '      Este script apenas valida se o arquivo existe e atualiza tags de status
 '      + Qsup/Qinf no ponto atual (ResultadoOperacional.csv).
 '
-'   B) TAGS DE SÉRIE — Carrega pontos em tags indexadas para alimentar o XY
+'   B) TAGS DE SÉRIE - Carrega pontos em tags indexadas para alimentar o XY
 '      <Prefixo>.EnvSup_Q[0..N], <Prefixo>.EnvSup_P[0..N]
 '      <Prefixo>.EnvInf_Q[0..N], <Prefixo>.EnvInf_P[0..N]
 '      Crie arrays/Internal Tags no Domain com tamanho >= MAX_PONTOS_CSV
@@ -56,7 +56,7 @@ Function CarregarCsvEmTagsSerie(caminhoCsv, prefixoSerie)
             If UBound(partes) >= 1 Then
                 q = TextoParaNumero(partes(0))
                 p = TextoParaNumero(partes(1))
-                ' Escrita em tag array — ajuste a sintaxe à sua versão do E3:
+                ' Escrita em tag array - ajuste a sintaxe à sua versão do E3:
                 '   Tags(prefixoSerie & "_Q[" & n & "]") = q
                 Call EscreverTag(prefixoSerie & "_Q[" & n & "]", q)
                 Call EscreverTag(prefixoSerie & "_P[" & n & "]", p)
@@ -139,7 +139,7 @@ Function IIf(cond, a, b)
 End Function
 
 ' -----------------------------------------------------------------------------
-' Percorre todas as UGs — chame no Timer DEPOIS de EnviarCampoTodasUGs
+' Percorre todas as UGs - chame no Timer DEPOIS de EnviarCampoTodasUGs
 ' (ou no mesmo timer, após o envio, dando tempo ao Python: ver 03_)
 ' -----------------------------------------------------------------------------
 Sub AtualizarPlotTodasUGs(carregarArrays)

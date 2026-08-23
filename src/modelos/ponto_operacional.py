@@ -17,10 +17,10 @@ Entradas de campo necessárias (literatura / prática profissional):
     | Queda útil (hidro)    | H       | Hn        | Limite Pmec da turbina        |
 
 Referências:
-    - KUNDUR, Cap. 3 — diagrama de capabilidade e excitação.
-    - IEEE Std 1110-2002 — modeling / capability curves.
-    - ONS BD Anatem — traçado operacional com Vt e If.
-    - IEC 60034-3 — curvas de capabilidade.
+    - KUNDUR, Cap. 3 - diagrama de capabilidade e excitação.
+    - IEEE Std 1110-2002 - modeling / capability curves.
+    - ONS BD Anatem - traçado operacional com Vt e If.
+    - IEC 60034-3 - curvas de capabilidade.
 """
 
 from dataclasses import dataclass

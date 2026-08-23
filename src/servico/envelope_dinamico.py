@@ -135,7 +135,7 @@ def ProcessarUnidade(unidade: UnidadeGeradora) -> ResultadoCicloUg:
             mensagem="ok",
             arquivos=arquivos,
         )
-    except Exception as erro:  # noqa: BLE001 — serviço não pode cair por 1 UG
+    except Exception as erro:  # noqa: BLE001 - serviço não pode cair por 1 UG
         return ResultadoCicloUg(id=unidade.id, ok=False, mensagem=str(erro))
 
 
@@ -165,7 +165,7 @@ def RodarServico(
         )
 
     ids = ", ".join(u.id for u in unidades)
-    print(f"Serviço envelope dinâmico — UGs: {ids}")
+    print(f"Serviço envelope dinâmico - UGs: {ids}")
     print(f"Intervalo: {intervalo_s:.2f} s | saída: <ug>/exportacao_elipse/")
 
     ciclo = 0

@@ -72,7 +72,7 @@ class CarregadorDados:
         """
         Carrega parâmetros da turbina, se o arquivo existir.
 
-        Compensadores síncronos tipicamente não possuem turbina — retorna None.
+        Compensadores síncronos tipicamente não possuem turbina - retorna None.
         """
         caminho = self.diretorio / nome_arquivo
         if not caminho.exists():

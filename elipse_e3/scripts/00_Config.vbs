@@ -1,5 +1,5 @@
 ' =============================================================================
-' 00_Config.vbs — Configuração compartilhada (Curva de Capabilidade × Elipse E3)
+' 00_Config.vbs - Configuração compartilhada (Curva de Capabilidade × Elipse E3)
 ' =============================================================================
 ' INCLUIR as constantes/funções nos outros scripts (copiar ou Library do E3).
 '
@@ -17,7 +17,7 @@ Option Explicit
 ' AJUSTE para o caminho do clone neste servidor (pasta dados/ do repositório).
 Public Const CAMINHO_RAIZ_DADOS = "C:\CurvaDeCapabilidade\dados"
 
-' --- Intervalo sugerido do timer no Elipse (ms) — alinhar ao --intervalo -----
+' --- Intervalo sugerido do timer no Elipse (ms) - alinhar ao --intervalo -----
 Public Const INTERVALO_TIMER_MS = 1000
 
 ' -----------------------------------------------------------------------------
@@ -42,7 +42,7 @@ End Function
 ' -----------------------------------------------------------------------------
 ' Sufixos das tags de campo. Prefixo vem da UG (ex.: UG01).
 '
-' Tags em engenharia (SI) — o script converte para p.u. ao gravar campo.json:
+' Tags em engenharia (SI) - o script converte para p.u. ao gravar campo.json:
 '   <Prefixo>.P_MW, .Q_Mvar, .Vt_kV, .If_A, .f_Hz
 ' Opcionais: .Is_A (0 = Python calcula), .H_m
 '

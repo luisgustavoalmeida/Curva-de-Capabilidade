@@ -12,7 +12,7 @@ Quando existe curva hidráulica tabulada (H × P), utiliza-se interpolação.
 
 Referências:
     - CHAUDHRY, M.H. Applied Hydraulic Transients.
-    - IEC 60193: Hydraulic turbines — model acceptance tests.
+    - IEC 60193: Hydraulic turbines - model acceptance tests.
     - Dados de colina / curva hidráulica do fabricante.
 """
 
@@ -58,7 +58,7 @@ def CalcularPotenciaHidraulicaPorQueda(
     """
     Potência disponível só pela queda útil (curva hidráulica ou afinidade).
 
-    Não aplica o teto PotenciaMaxima da turbina — para plotar o limitador
+    Não aplica o teto PotenciaMaxima da turbina - para plotar o limitador
     de queda separado do teto mecânico.
     """
     queda = queda_atual if queda_atual > 0 else turbina.queda_nominal
@@ -102,7 +102,7 @@ def _calcular_potencia_hidraulica_mw(turbina: Turbina, queda: float) -> float:
     Potência hidráulica em MW (curva ou afinidade), sem teto mecânico.
 
     Com H ≤ Hn: usa a curva do fabricante quando existir.
-    Com H > Hn: permite subir — max(curva, afinidade), pois tabelas
+    Com H > Hn: permite subir - max(curva, afinidade), pois tabelas
     costumam saturar no Pnom e não refletem H acima do nominal.
     """
     p_afinidade = CalcularPotenciaHidraulicaPorAfinidade(turbina, queda)

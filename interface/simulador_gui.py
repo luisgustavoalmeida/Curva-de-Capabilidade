@@ -4,7 +4,7 @@ Interface gráfica do simulador de curva de capabilidade.
 Entradas de campo em p.u. (prática profissional ONS / IEEE / Elipse):
     P, Q, Vt, If, Is, f, H
 
-Esta camada NÃO contém lógica de cálculo — consome o simulador.
+Esta camada NÃO contém lógica de cálculo - consome o simulador.
 """
 
 import tkinter as tk
@@ -23,13 +23,13 @@ from src.utilitarios.grafico import ConverterParaGrafico, PontoOperacionalParaGr
 
 # Definição das entradas de campo necessárias (ordem de exibição)
 ENTRADAS_CAMPO = (
-    ("P", "P — Potência ativa (pu)", "Sn"),
-    ("Q", "Q — Potência reativa (pu)", "Sn"),
-    ("Vt", "Vt — Tensão terminal (pu)", "Vn"),
-    ("If", "If — Corrente de campo (pu)", "If_FL"),
-    ("Is", "Is — Corrente de estator (pu) [0 = S/Vt]", "In"),
-    ("f", "f — Frequência (pu) [V/Hz = Vt/f]", "fn"),
-    ("H", "H — Queda útil (pu)", "Hn"),
+    ("P", "P - Potência ativa (pu)", "Sn"),
+    ("Q", "Q - Potência reativa (pu)", "Sn"),
+    ("Vt", "Vt - Tensão terminal (pu)", "Vn"),
+    ("If", "If - Corrente de campo (pu)", "If_FL"),
+    ("Is", "Is - Corrente de estator (pu) [0 = S/Vt]", "In"),
+    ("f", "f - Frequência (pu) [V/Hz = Vt/f]", "fn"),
+    ("H", "H - Queda útil (pu)", "Hn"),
 )
 
 
@@ -44,7 +44,7 @@ class InterfaceSimulador(tk.Tk):
         self._carregar_simulador()
         tipo = self.simulador.gerador.tipo_maquina.value
         self.title(
-            f"Curva de Capabilidade — {self.simulador.gerador.identificacao} ({tipo})"
+            f"Curva de Capabilidade - {self.simulador.gerador.identificacao} ({tipo})"
         )
         self._criar_widgets()
         self._atualizar_resultados()
@@ -63,9 +63,9 @@ class InterfaceSimulador(tk.Tk):
 
         titulo_painel = "Entradas de campo (p.u.)"
         if eh_compensador:
-            titulo_painel += " — Compensador síncrono (P ≈ 0)"
+            titulo_painel += " - Compensador síncrono (P ≈ 0)"
         else:
-            titulo_painel += " — posição na curva"
+            titulo_painel += " - posição na curva"
 
         painel_entrada = ttk.LabelFrame(self, text=titulo_painel)
         painel_entrada.pack(side=tk.LEFT, fill=tk.Y, padx=10, pady=10)
@@ -94,7 +94,7 @@ class InterfaceSimulador(tk.Tk):
                 continue
             rotulo_exibir = rotulo
             if chave == "P" and eh_compensador:
-                rotulo_exibir = "P — Potência ativa (pu) [≈ 0]"
+                rotulo_exibir = "P - Potência ativa (pu) [≈ 0]"
             ttk.Label(painel_entrada, text=f"{rotulo_exibir}  [base {base_nome}]").pack(
                 anchor=tk.W, padx=5, pady=2
             )
@@ -251,7 +251,7 @@ class InterfaceSimulador(tk.Tk):
         potencia_ativa_pu: float,
         potencia_reativa_pu: float,
     ) -> None:
-        # Recria o eixo a cada recálculo — evita figura “quebrada” no Tk
+        # Recria o eixo a cada recálculo - evita figura “quebrada” no Tk
         self.figura.clear()
         self.eixo = self.figura.add_subplot(111)
 
@@ -265,14 +265,14 @@ class InterfaceSimulador(tk.Tk):
                 coordenada_y,
                 color="#C8E6C9",
                 alpha=0.35,
-                label="Região Permitida — área segura de operação",
+                label="Região Permitida - área segura de operação",
             )
             self.eixo.plot(
                 coordenada_x,
                 coordenada_y,
                 "g-",
                 linewidth=1.5,
-                label="Traçado Operacional — envelope efetivo",
+                label="Traçado Operacional - envelope efetivo",
             )
 
         cores_ref = {
@@ -301,31 +301,31 @@ class InterfaceSimulador(tk.Tk):
             self.simulador.gerador.fator_potencia_nominal
         )
         rotulos = {
-            "LimiteSobreExcitacao": "OEL TH — Limite térmico de sobre-excitação",
-            "LimiteRotor": "OEL PK — Limite de pico de sobre-excitação",
-            "LimiteEstator": "SCL — Limite efetivo de corrente do estator",
-            "CirculoPotenciaAparente": "S = Vt·Imax — Limite SCL (capacidade)",
+            "LimiteSobreExcitacao": "OEL TH - Limite térmico de sobre-excitação",
+            "LimiteRotor": "OEL PK - Limite de pico de sobre-excitação",
+            "LimiteEstator": "SCL - Limite efetivo de corrente do estator",
+            "CirculoPotenciaAparente": "S = Vt·Imax - Limite SCL (capacidade)",
             "CirculoOperacaoIs": (
-                f"S = Vt·Is — Operação atual (Is={getattr(pontos, 'corrente_estator_operacao_pu', 0):.3f})"
+                f"S = Vt·Is - Operação atual (Is={getattr(pontos, 'corrente_estator_operacao_pu', 0):.3f})"
             ),
-            "LimiteEstabilidade": "UEL — Limite de subexcitação / estabilidade",
-            "LimiteEstabilidadePratica": "UEL Prático — Limite prático de estabilidade",
-            "LimiteSubExcitacao": "MEL — Limitador de excitação mínima",
-            "LimiteSaturacao": "Saliência polar — Limite por saliência do rotor",
-            "LimiteSaturacaoMagnetica": "Saturação magnética — Limite de Q (OCC)",
+            "LimiteEstabilidade": "UEL - Limite de subexcitação / estabilidade",
+            "LimiteEstabilidadePratica": "UEL Prático - Limite prático de estabilidade",
+            "LimiteSubExcitacao": "MEL - Limitador de excitação mínima",
+            "LimiteSaturacao": "Saliência polar - Limite por saliência do rotor",
+            "LimiteSaturacaoMagnetica": "Saturação magnética - Limite de Q (OCC)",
             "LimiteAquecimentoExtremoEstator": (
-                "End-iron — Aquecimento de extremo do estator"
+                "End-iron - Aquecimento de extremo do estator"
             ),
-            "LimiteCorrenteCampo": "IFD — Limite de corrente de campo",
-            "LimitePmecMax": "Pmec Max — Limite da região permitida (P)",
-            "LimiteQuedaUtil": "Queda útil — Referência P(H) [não limita a região]",
-            "LimiteTurbinaMax": "Turbina Max — Referência teto da turbina",
-            "LimitePmecMin": "Pmec Min — Limite inferior da região (P)",
-            "LimiteTurbinaMin": "Turbina Min — Referência piso da turbina",
+            "LimiteCorrenteCampo": "IFD - Limite de corrente de campo",
+            "LimitePmecMax": "Pmec Max - Limite da região permitida (P)",
+            "LimiteQuedaUtil": "Queda útil - Referência P(H) [não limita a região]",
+            "LimiteTurbinaMax": "Turbina Max - Referência teto da turbina",
+            "LimitePmecMin": "Pmec Min - Limite inferior da região (P)",
+            "LimiteTurbinaMin": "Turbina Min - Referência piso da turbina",
             "FatorPotenciaNominal": (
-                f"fp = {fp:.2f} — Reta do fator de potência nominal"
+                f"fp = {fp:.2f} - Reta do fator de potência nominal"
             ),
-            "EixoOperacaoCompensador": "P = 0 — Eixo de operação (compensador)",
+            "EixoOperacaoCompensador": "P = 0 - Eixo de operação (compensador)",
         }
         estilos = {
             "LimitePmecMax": {"linewidth": 2.0, "linestyle": "-", "alpha": 1.0},
@@ -382,7 +382,7 @@ class InterfaceSimulador(tk.Tk):
             markersize=9,
             markerfacecolor="yellow",
             markeredgewidth=1.5,
-            label="Ponto Operacional — estado atual (P, Q)",
+            label="Ponto Operacional - estado atual (P, Q)",
         )
         self.eixo.set_xlabel("Potência Reativa Q (p.u.)")
         self.eixo.set_ylabel("Potência Ativa P (p.u.)")
@@ -404,7 +404,7 @@ class InterfaceSimulador(tk.Tk):
 
         self._aplicar_janela_circular(pontos)
 
-        # Legenda à direita — libera altura do gráfico
+        # Legenda à direita - libera altura do gráfico
         self.eixo.legend(
             loc="center left",
             bbox_to_anchor=(1.02, 0.5),

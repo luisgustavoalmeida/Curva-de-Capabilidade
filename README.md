@@ -12,6 +12,10 @@ O cálculo segue o traçado operacional em p.u. (base \(S_n\)) com dependência 
 | Entrada | JSON + CSV opcionais por unidade geradora |
 | Saída | GUI, console, CSV para gráfico XY no Elipse E3 |
 
+![Interface do simulador](Imagens/Imagem%20interface.png)
+
+*Interface gráfica: entradas de campo em p.u., resultado da capabilidade e traçado operacional P–Q.*
+
 ---
 
 ## Índice

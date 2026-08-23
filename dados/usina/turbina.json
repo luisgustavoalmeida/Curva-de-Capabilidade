@@ -2,7 +2,7 @@
   "_Instrucoes": "Opcional. Remova este arquivo (ou a pasta turbina) se for compensador ou máquina sem turbina modelada. Queda H no gráfico é referência - não corta o envelope elétrico.",
   "_ReferenciaDados": "Francis de demonstração - mesma base do exemplo Sobradinho (Hn 27,5 m, Pn 175,05 MW).",
   "_Comentario_Identificacao": "Nome da turbina",
-  "Identificacao": "Turbina Francis - UHE Sobradinho U01",
+  "Identificacao": "Turbina Francis - UHE UG01",
   "_Comentario_Tipo": "Francis | Kaplan | Pelton | Termica",
   "Tipo": "Francis",
   "_Comentario_PotenciaNominal": "Pn da turbina [MW]",

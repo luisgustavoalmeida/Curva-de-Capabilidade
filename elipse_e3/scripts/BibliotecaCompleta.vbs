@@ -1,9 +1,9 @@
 Option Explicit
 
-' BibliotecaCompleta.vbs — ver elipse_e3/GUIA_IMPLEMENTACAO.md
+' BibliotecaCompleta.vbs - ver elipse_e3/GUIA_IMPLEMENTACAO.md
 
 ' =============================================================================
-' 00_Config.vbs — Configuração compartilhada (Curva de Capabilidade × Elipse E3)
+' 00_Config.vbs - Configuração compartilhada (Curva de Capabilidade × Elipse E3)
 ' =============================================================================
 ' INCLUIR as constantes/funções nos outros scripts (copiar ou Library do E3).
 '
@@ -20,7 +20,7 @@ Option Explicit
 ' AJUSTE para o caminho do clone neste servidor (pasta dados/ do repositório).
 Public Const CAMINHO_RAIZ_DADOS = "C:\CurvaDeCapabilidade\dados"
 
-' --- Intervalo sugerido do timer no Elipse (ms) — alinhar ao --intervalo -----
+' --- Intervalo sugerido do timer no Elipse (ms) - alinhar ao --intervalo -----
 Public Const INTERVALO_TIMER_MS = 1000
 
 ' -----------------------------------------------------------------------------
@@ -45,7 +45,7 @@ End Function
 ' -----------------------------------------------------------------------------
 ' Sufixos das tags de campo. Prefixo vem da UG (ex.: UG01).
 '
-' Tags em engenharia (SI) — o script converte para p.u. ao gravar campo.json:
+' Tags em engenharia (SI) - o script converte para p.u. ao gravar campo.json:
 '   <Prefixo>.P_MW, .Q_Mvar, .Vt_kV, .If_A, .f_Hz
 ' Opcionais: .Is_A (0 = Python calcula), .H_m
 '
@@ -89,7 +89,7 @@ Public Const MAX_PONTOS_CSV = 500
 
 
 ' =============================================================================
-' 04_Utilitarios.vbs — Funções auxiliares (arquivo, número, tags)
+' 04_Utilitarios.vbs - Funções auxiliares (arquivo, número, tags)
 ' =============================================================================
 ' Dependências: constantes de 00_Config.vbs (CAMINHO_RAIZ_DADOS, etc.)
 '
@@ -229,7 +229,7 @@ End Function
 '   2) Crie as tags listadas em elipse_e3/tags/CATALOGO_TAGS.md
 '   3) Ajuste CAMINHO_RAIZ_DADOS e ObterDefinicaoUGs() em 00_Config.vbs
 '
-' O Python NÃO precisa estar no mesmo script — só precisa do arquivo atualizado.
+' O Python NÃO precisa estar no mesmo script - só precisa do arquivo atualizado.
 ' =============================================================================
 
 
@@ -328,13 +328,13 @@ End Sub
 '
 ' ESTRATÉGIA DE PLOT NO ELIPSE E3 (duas opções)
 '
-'   A) RECOMENDADA — Gráfico XY ligado ao arquivo CSV
+'   A) RECOMENDADA - Gráfico XY ligado ao arquivo CSV
 '      No Studio: ChartXY → Pen → Data Source = arquivo
 '      (ou “User File” / importação periódica, conforme versão do E3)
 '      Este script apenas valida se o arquivo existe e atualiza tags de status
 '      + Qsup/Qinf no ponto atual (ResultadoOperacional.csv).
 '
-'   B) TAGS DE SÉRIE — Carrega pontos em tags indexadas para alimentar o XY
+'   B) TAGS DE SÉRIE - Carrega pontos em tags indexadas para alimentar o XY
 '      <Prefixo>.EnvSup_Q[0..N], <Prefixo>.EnvSup_P[0..N]
 '      <Prefixo>.EnvInf_Q[0..N], <Prefixo>.EnvInf_P[0..N]
 '      Crie arrays/Internal Tags no Domain com tamanho >= MAX_PONTOS_CSV
@@ -370,7 +370,7 @@ Function CarregarCsvEmTagsSerie(caminhoCsv, prefixoSerie)
             If UBound(partes) >= 1 Then
                 q = TextoParaNumero(partes(0))
                 p = TextoParaNumero(partes(1))
-                ' Escrita em tag array — ajuste a sintaxe à sua versão do E3:
+                ' Escrita em tag array - ajuste a sintaxe à sua versão do E3:
                 '   Tags(prefixoSerie & "_Q[" & n & "]") = q
                 Call EscreverTag(prefixoSerie & "_Q[" & n & "]", q)
                 Call EscreverTag(prefixoSerie & "_P[" & n & "]", p)
@@ -453,7 +453,7 @@ Function IIf(cond, a, b)
 End Function
 
 ' -----------------------------------------------------------------------------
-' Percorre todas as UGs — chame no Timer DEPOIS de EnviarCampoTodasUGs
+' Percorre todas as UGs - chame no Timer DEPOIS de EnviarCampoTodasUGs
 ' (ou no mesmo timer, após o envio, dando tempo ao Python: ver 03_)
 ' -----------------------------------------------------------------------------
 Sub AtualizarPlotTodasUGs(carregarArrays)
@@ -468,7 +468,7 @@ End Sub
 
 
 ' =============================================================================
-' 03_TimerCicloCompleto.vbs — Ciclo Elipse × Python (todas as UGs)
+' 03_TimerCicloCompleto.vbs - Ciclo Elipse × Python (todas as UGs)
 ' =============================================================================
 '
 ' FLUXO A CADA TICK DO TIMER (recomendado: 1000 ms)

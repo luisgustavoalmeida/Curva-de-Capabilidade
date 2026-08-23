@@ -1,4 +1,4 @@
-# OEL / sobre-excitação (aquec. campo) — PotenciaReativaPu, PotenciaAtivaPu
+# OEL / sobre-excitação (aquec. campo) - PotenciaReativaPu, PotenciaAtivaPu
 # Opcional: se ausente, usa arco OEL analítico (Xd, If)
 PotenciaReativaPu,PotenciaAtivaPu
 0.767551,0.000000

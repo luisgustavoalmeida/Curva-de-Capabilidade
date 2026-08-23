@@ -5,7 +5,7 @@ Objetivo:
     Aplicar limite de corrente do estator a partir da curva SCL do fabricante/ONS.
 
 Referências:
-    - ONS BD Anatem — traçado operacional / limite de estator tabulado.
+    - ONS BD Anatem - traçado operacional / limite de estator tabulado.
     - IEEE Std 1110-2002: Stator current limit.
 """
 

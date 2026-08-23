@@ -2,7 +2,7 @@
   "_Instrucoes": "TEMPLATE ÚNICO - copie a pasta dados/usina ou use 'python main.py nova-usina --pasta minha_usina' e edite só os valores (não as chaves). Chaves que começam com _ são comentários e são ignoradas pelo programa.",
   "_ReferenciaDados": "Valores validados no exemplo Sobradinho (ONS BD Anatem) - Sn 194,5 MVA, FP 0,9. Para nova usina troque identificação e placa.",
   "_Comentario_Identificacao": "Nome exibido na interface e nos relatórios",
-  "Identificacao": "UHE Sobradinho - Unidade 01",
+  "Identificacao": "UHE - Unidade 01",
   "_Comentario_Descricao": "Texto livre (opcional)",
   "Descricao": "Gerador síncrono - dados de demonstração alinhados ao traçado operacional Sobradinho (p.u. com Vt)",
   "_Comentario_TipoMaquina": "Gerador | CompensadorSincrono. Compensador: P≈0, sem turbina, PotenciaAtivaMaximaPu=0",

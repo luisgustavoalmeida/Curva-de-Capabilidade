@@ -13,7 +13,7 @@
 '   2) Crie as tags listadas em elipse_e3/tags/CATALOGO_TAGS.md
 '   3) Ajuste CAMINHO_RAIZ_DADOS e ObterDefinicaoUGs() em 00_Config.vbs
 '
-' O Python NÃO precisa estar no mesmo script — só precisa do arquivo atualizado.
+' O Python NÃO precisa estar no mesmo script - só precisa do arquivo atualizado.
 ' =============================================================================
 
 Option Explicit

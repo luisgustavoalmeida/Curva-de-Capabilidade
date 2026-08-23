@@ -2,7 +2,7 @@
 Limite de estabilidade estática (UEL).
 
 Com curva tabulada do fabricante: escala (Vt/Vt_ref)².
-Sem curva: não vincula o envelope (retorna −∞) — modo mínimo analítico.
+Sem curva: não vincula o envelope (retorna −∞) - modo mínimo analítico.
 """
 
 from typing import Optional

@@ -1,4 +1,4 @@
-# SCL tabulado (estator) — colunas: PotenciaReativaPu, PotenciaAtivaPu
+# SCL tabulado (estator) - colunas: PotenciaReativaPu, PotenciaAtivaPu
 # Opcional: se ausente, usa círculo analítico S = Vt·Imax
 PotenciaReativaPu,PotenciaAtivaPu
 0.997500,0.000000

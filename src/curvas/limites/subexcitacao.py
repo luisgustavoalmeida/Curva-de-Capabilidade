@@ -2,7 +2,7 @@
 Limite de sub-excitação (MEL).
 
 Com curva tabulada: interpolação Q(P).
-Sem curva: não vincula o envelope (retorna −∞) — modo mínimo analítico.
+Sem curva: não vincula o envelope (retorna −∞) - modo mínimo analítico.
 """
 
 from typing import Optional

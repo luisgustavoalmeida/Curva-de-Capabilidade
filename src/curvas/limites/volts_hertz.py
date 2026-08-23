@@ -1,5 +1,5 @@
 """
-Limitador Volts/Hertz (V/Hz) — proteção contra sobrefluxo.
+Limitador Volts/Hertz (V/Hz) - proteção contra sobrefluxo.
 
 O fluxo magnético no núcleo é proporcional a Vt/f. Em p.u.:
 
@@ -14,8 +14,8 @@ Efeitos na capabilidade:
 
 Referências:
     - IEEE Std C37.102 / práticas de limitadores V/Hz em AVRs.
-    - KUNDUR, P. Power System Stability and Control — overfluxing.
-    - IEC 60034 — operação em frequência fora do nominal.
+    - KUNDUR, P. Power System Stability and Control - overfluxing.
+    - IEC 60034 - operação em frequência fora do nominal.
 """
 
 
@@ -65,7 +65,7 @@ def VerificarVoltsHertz(
     """
     vhz = CalcularRelacaoVoltsHertz(tensao_terminal_pu, frequencia_pu)
     if frequencia_pu <= 1e-9:
-        return False, vhz, "Frequência nula ou inválida — V/Hz indefinido."
+        return False, vhz, "Frequência nula ou inválida - V/Hz indefinido."
     if relacao_maxima_pu > 0 and vhz > relacao_maxima_pu + 1e-6:
         return (
             False,
