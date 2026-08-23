@@ -1,0 +1,12 @@
+# Curva hidráulica — Queda [m], Potencia [MW]
+# Referenciada em turbina.json → ArquivoCurvaHidraulica
+Queda,Potencia
+20.0,108.0
+22.0,125.0
+24.0,145.0
+25.0,155.0
+26.0,165.0
+27.5,175.05
+29.0,189.6
+30.0,199.5
+32.0,220.0

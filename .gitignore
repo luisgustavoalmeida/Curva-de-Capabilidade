@@ -1,0 +1,41 @@
+# Ambiente e Python
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.log
+
+# IDE / editor
+.idea/
+*.swp
+*.swo
+*.code-workspace
+.vscode/settings.json
+.vscode/*.code-workspace
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Segredos e ambiente local
+.env
+.env.*
+
+# Planilhas locais de referência (não fazem parte do código)
+*.xlsm
+*.xlsx
+~$*
+
+# Saída gerada (python main.py exportar / servico)
+dados/**/exportacao_elipse/

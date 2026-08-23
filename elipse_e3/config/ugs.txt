@@ -1,0 +1,10 @@
+# Lista de UGs (referência)
+# Formato igual a ObterDefinicaoUGs() em 00_Config.vbs:
+# IdPasta|PrefixoTag|Sn_MVA|Vn_kV|IfFL_A|fn_Hz|Hn_m|TemTurbina
+#
+# IdPasta = pasta em dados/ (deve conter gerador.json)
+# PrefixoTag = prefixo das tags no Elipse
+
+usina|USINA|194.5|13.8|1780|60|27.5|1
+ug01|UG01|194.5|13.8|1780|60|27.5|1
+ug02|UG02|194.5|13.8|1780|60|27.5|1

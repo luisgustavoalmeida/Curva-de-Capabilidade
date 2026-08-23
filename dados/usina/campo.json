@@ -1,0 +1,13 @@
+{
+  "_Instrucoes": "Entradas de campo lidas pelo serviço (python main.py servico). O Elipse/OPC/script pode sobrescrever este arquivo a cada ciclo. Chaves _* sao comentarios.",
+  "_Unidades": "Com EmPorUnidade=true: P,Q em pu de Sn; Vt pu de Vn; If pu de If_FL; Is pu de In (0=calcula); f pu de fn; H pu de Hn.",
+
+  "EmPorUnidade": true,
+  "P": 0.54,
+  "Q": 0.13,
+  "Vt": 1.0,
+  "If": 1.0,
+  "Is": 0.0,
+  "f": 1.0,
+  "H": 1.0
+}
