@@ -282,7 +282,3 @@ Não entram no GitHub: `venv/`, caches, a planilha `.xlsm` local e a pasta gerad
 No Elipse, ajuste `CAMINHO_RAIZ_DADOS` em `elipse_e3/scripts/00_Config.vbs` para a pasta `dados/` do clone neste servidor.
 
 ---
-
-## Licença
-
-Distribuído sob a [licença MIT](LICENSE).
